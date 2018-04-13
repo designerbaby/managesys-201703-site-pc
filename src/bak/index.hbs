@@ -1,0 +1,59 @@
+--- layout: default.hbs title: seed-pc keywords: seed-pc description: seed-pc stylesheet: index script: index hiido_wid:
+---
+<div class="page">
+    {{>header}}
+    <div class="desc">
+        <div class="desc__container">
+            <div class="desc__content js-desc"></div>
+            <a href="rank.html" class="desc__btn"></a>
+        </div>
+    </div>
+    {{>footer}}
+</div>
+
+
+
+var json = {
+    data: {
+        zuhe1 :{    //这个是第一个组合
+            id: 1,         //这个是第一个组合的id
+            num： 213,      //这个是组合编号
+            style: 234,      //这个是组合风格
+            remark: '',       //这个是组合的备注
+            buniu: {
+                id: 86,          //这个是组合里面物料1的id
+                name: '这个是物料名称',
+                remark: '物料备注',
+                class: '物料类别',
+                img: '物料图片'
+            },
+            chenbu:{
+                id: 86,     //这个是组合里面物料2的id
+                name: '这个是物料名称',
+                remark: '物料备注',
+                class: '物料类别',
+                img: '物料图片'
+            }
+        },
+        zuhe2 :{
+             id: 1,         //这个是第一个组合的id
+             num： 213,      //这个是组合编号
+             style: 234,      //这个是组合风格
+             remark: '',       //这个是组合的备注
+             buniu: {
+                id: 86,
+                name: '这个是物料名称',
+                remark: '物料备注',
+                class: '物料类别',
+                img: '物料图片'
+            },
+            chenbu:{
+                id: 86,
+                name: '这个是物料名称',
+                remark: '物料备注',
+                class: '物料类别',
+                img: '物料图片'
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+.header {
+    @extend %sec;
+    width: 100%;
+    height: 50px;
+    z-index: 2048;
+    pointer-events: none;
+    box-shadow: 0 2px 3px hsla(0, 0%, 7%, .1), 0 0 0 1px hsla(0, 0%, 7%, .1);
+    &__common {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        .nav-item img {
+            max-height: 24px;
+        }
+    }
+    &__left {
+        // background: red;
+    }
+    &__middle {
+        // background: blue;
+        &__text {
+            align-items: center;
+            display: flex;
+            flex-grow: 0;
+            justify-content: center;
+            line-height: 50px;
+        }
+    }
+    &__right {
+        // background: black;
+    }
+    &__btn {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+    }
+}
+
+.nav-item a,
+a.nav-item {
+    color: #7a7a7a;
+}
+.nav-item-img{
+    background-image: url('../data/logo.png');
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    background-size: 100%;
+}

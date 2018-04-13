@@ -1,0 +1,89 @@
+<section class="app-main">
+    <div class="is-fluid is-marginless app-content">
+        <nav class="level app-levelbar">
+            <div class="level-left">
+                <div class="level-item">
+                    <h3 class="subtitle is-5"><strong>物料管理</strong></h3>
+                </div>
+            </div>
+        </nav>
+        <div class="material__edit top">
+            <div class="material__edit__name">风格分类</div>
+            <div class="col-xs-2">
+                <select class="form-control">
+                    <option value ="all">全部</option>
+                    <option value ="American">美式</option>
+                    <option value="europe">欧式</option>
+                    <option value="french">法式</option>
+                    <option value ="chinese">中式</option>
+                    <option value ="newChinese">新中式</option>
+                    <option value="modern">现代</option>
+                    <option value="wishes">低奢</option>
+                    <option value="children">儿童</option>
+                    <option value="rural">田园</option>
+                    <option value="midter">地中海</option>
+                </select>
+            </div>
+        </div>
+        <div class="material__edit">
+            <div class="material__edit__name">将</div>
+            <div class="material__input">
+                <div class="col-xs-2">
+                    <select class="form-control" id="materialStyle">
+                        <option value ="all">全部</option>
+                        <option value ="American">美式</option>
+                        <option value="europe">欧式</option>
+                        <option value="french">法式</option>
+                        <option value ="chinese">中式</option>
+                        <option value ="newChinese">新中式</option>
+                        <option value="modern">现代</option>
+                        <option value="afterModern">后现代</option>
+                        <option value="wishes">低奢</option>
+                        <option value="children">儿童</option>
+                        <option value="rural">田园</option>
+                        <option value="midter">地中海</option>
+                        <option value="allMaterial">所有物料</option>
+                    </select>
+                </div>
+            </div>
+            <div class="material__edit__name">的零售价设为出厂价*</div>
+            <div class="material__input">
+                <div class="col-xs-2">
+                    <input type="text" class="form-control" id="selfPrice" placeholder="2.2">
+                </div>
+            </div>
+            <button class="btn btn-default" type="submit" id="changeSelfPrice">确定</button>
+        </div>
+        <div class="material__edit top">
+            <div class="material__edit__name">搜索物料名称</div>
+            <div class="col-xs-2">
+                <input type="text" class="form-control" id="materialSearch" placeholder="search">
+            </div>
+            <button class="btn btn-default" type="submit" id="searchMaterial">确定</button>
+            <button type="button" class="btn btn-primary" id="addMaterial">增加原材料</button>
+        </div>
+        <div class="box animated top">
+            <table class="table is-striped">
+                <thead>
+                    <tr>
+                        <th>图片</th>
+                        <th>风格</th>
+                        <th>名字</th>
+                        <th>类型</th>
+                        <th>成本</th>
+                        <th>单位</th>
+                        <th>fPart</th>
+                        <th>零售价</th>
+                        <th>规格</th>
+                        <th>是否裁剪</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="js-material">
+                </tbody>
+            </table>
+            <div class="page-nav"></div>
+        </div>
+
+    </div>
+</section>

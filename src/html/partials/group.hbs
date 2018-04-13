@@ -1,0 +1,50 @@
+<section class="app-main">
+    <div class="container is-fluid is-marginless app-content">
+        <nav class="level app-levelbar">
+            <div class="level-left">
+                <div class="level-item">
+                    <h3 class="subtitle is-5"><strong>组合管理</strong></h3>
+                </div>
+            </div>
+        </nav>
+        <div class="group-style">
+            <div class="group-name">风格分类</div>
+            <div class="col-xs-2">
+                <select class="form-control" id="group-style">
+                    <option value ="all">全部</option>
+                    <option value ="American">美式</option>
+                    <option value="europe">欧式</option>
+                    <option value="french">法式</option>
+                    <option value ="chinese">中式</option>
+                    <option value ="newChinese">新中式</option>
+                    <option value="modern">现代</option>
+                    <option value="afterModern">后现代</option>
+                    <option value="wishes">低奢</option>
+                    <option value="children">儿童</option>
+                    <option value="rural">田园</option>
+                    <option value="midter">地中海</option>
+                    <option value="geteshi">哥特式</option>
+                </select>
+            </div>
+        </div>
+        <div class="group-search">
+            <div class="group-name">组合名称</div>
+            <div class="col-xs-2">
+                <input type="text" class="form-control" placeholder="组合名称" id="input-group-name">
+            </div>
+            <button class="btn btn-default" type="submit" id="group-search">查找</button>
+        </div>
+        <div class="group-tabs">
+            <button type="button" class="btn btn-primary group-add">新增组合</button>
+        </div>
+        <div class="animated group-box" id="group-box">
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="swiper-wrapper"></div>
+                <div class="swiper-pagination"></div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+</section>

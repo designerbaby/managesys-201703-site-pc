@@ -1,0 +1,62 @@
+<div class="modal-mask" id="add-modal-material">
+    <div class="modal-close" id="add-modal-close"></div>
+    <div class="new-modal">
+        <div class="modal-content">
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">请输入所增加的物料的信息</p><button class="delete" id="add-delete"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="box flex-wrapper">
+                        <table class="table is-striped">
+                            <thead>
+                                <tr>
+                                    <th>图片</th>
+                                    <th>名字</th>
+                                    <th>ID</th>
+                                    <th>FMaterial?</th>
+                                    <th>规格</th>
+                                    <th>单位</th>
+                                    <th>成本</th>
+                                    <th>宽度</th>
+                                    <th>高度</th>
+                                    <th>类型</th>
+                                    <th>是否裁剪？</th>
+                                    <th>零售价</th>
+                                    <th>总计</th>
+                                    <th>FPart?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <form action="http://caishenye2015.gnway.cc:38080/material" method="post">
+                                            <input type="file" name="fileMaterial" style="width: 100px;"><br/>
+                                            <button class="btn btn-default" id="addMaterialUpload">提交图片</button>
+                                        </form>
+                                    </td>
+                                    <td><input type="text" name="FName" style="width:50px;"></td>
+                                    <td><input type="text" name="FID" style="width:50px;"></td>
+                                    <td><input type="text" name="FMaterial" style="width:50px;"></td>
+                                    <td><input type="text" name="FVol" style="width: 50px;"></td>
+                                    <td><input type="text" name="FUnit" style="width: 50px;"></td>
+                                    <td><input type="text" name="FCost" style="width: 50px;"></td>
+                                    <td><input type="text" name="FWidth" style="width: 50px;"></td>
+                                    <td><input type="text" name="FHeight" style="width: 50px;"></td>
+                                    <td><input type="text" name="FCategory" style="width: 50px;"></td>
+                                    <td><input type="text" name="FCut" style="width: 50px;"></td>
+                                    <td><input type="text" name="FRetail" style="width: 50px;"></td>
+                                    <td><input type="text" name="FTotal" style="width: 50px;"></td>
+                                    <td><input type="text" name="FPart" style="width: 50px;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="btn btn-success" id="add-modal-submit">确定更改</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>

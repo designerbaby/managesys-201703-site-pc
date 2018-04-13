@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@import "lib/mixin";
+@import "lib/normalize";
+@import "lib/reset";
+@import "lib/hack";
+
+
+@import "common/base";
+@import "common/extend";
+
+@import "module/common/page";
+@import "module/common/header";
+@import "module/common/footer";
+@import "module/common/aside";
+
+.content{
+    background-image: url('../data/logo.png');
+    width: 600px;
+    height: 500px;
+    margin-left: 300px;
+    background-size: 100%;
+}

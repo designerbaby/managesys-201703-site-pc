@@ -1,0 +1,66 @@
+.app-main {
+    padding-top: 10px;
+    margin-left: 200px;
+    transform: translateZ(0);
+    margin-right: 20px;
+}
+
+.container {
+    position: relative;
+}
+
+.level:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.level {
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+
+tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+img {
+    max-width: 100%;
+}
+.level-item .subtitle, .level-item .title {
+    margin-bottom: 0;
+}
+.subtitle.is-4 code, .subtitle.is-5 {
+    font-size: 18px;
+}
+.subtitle {
+    color: #4a4a4a;
+    font-size: 18px;
+    line-height: 1.125;
+}
+.subtitle, .title {
+    font-weight: 300;
+    word-break: break-word;
+}
+.subtitle strong {
+    color: #363636;
+}
+.subtitle strong, .title strong {
+    font-weight: 500;
+}
+.material__edit{
+    height: 34px;
+    margin-top: 10px;
+}
+.material__edit__name{
+    float: left;
+    line-height: 34px;
+}

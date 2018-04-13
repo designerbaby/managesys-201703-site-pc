@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+%ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+    br {
+        display: none;
+    }
+}
+
+/*
+ * @name:  inline-block
+ * @param: $alignment {string}  对齐类型
+ * @param: $support-for-ie {boolean}  是否支持IE6
+ */
+@mixin inline-block($alignment: middle, $support-for-ie: true) {
+    display: inline-block;
+    @if $alignment and $alignment != none {
+        vertical-align: $alignment;
+    }
+    @if $support-for-ie {
+        *vertical-align: auto;
+        *display: inline;
+        zoom: 1;
+    }
+}
+
+/*
+ * @name:  背景透明
+ * @param: $color {color}  颜色
+ * @param: $opacity {number}  透明度
+ * @param: $support-for-ie {boolean}  是否支持IE6
+ * @link:  https://github.com/airen/Sass_mixins_function/tree/master/mixins
+ */
+@mixin transparent($color, $opacity, $support-for-ie:true) {
+    background-color: transparent;
+    background-color: rgba($color, $opacity);
+    @if $support-for-ie {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#{ie-hex-str(rgba($color, $opacity))},endColorstr=#{ie-hex-str(rgba($color, $opacity))});
+        zoom: 1;
+        :root & {
+            filter: none;
+        }
+    }
+}
+
+
+// text overflow
+// -------------------------
+// requires inline-block or block for proper styling
+@mixin text-overflow() {
+    word-wrap: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+// opacity
+@mixin opacity($opacity) {
+    opacity: $opacity / 100;
+    filter: alpha(opacity=$opacity);
+}
+
+/*
+ * @name:  resizable
+ * @param: $direction {string}  缩放的方向 (horizontal || vertical || both)
+ * @link:  https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_resize.scss
+ * @1:     Per CSS3 UI, `resize` only applies when `overflow` isn't `visible`
+ */
+@mixin resizable($direction) {
+    resize: $direction;
+    overflow: auto; /* 1 */
+}
